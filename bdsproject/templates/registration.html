@@ -1,0 +1,123 @@
+<html lang="en">
+<title>Registration</title>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+    <style>
+           .social-part .fa{
+    padding-right:20px;
+}
+ul li a{
+    margin-right: 20px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66%;
+  }
+  .registerform{
+    padding: .25em 0;
+    background: skyblue;
+    color: black;
+  }
+ .registerclass{
+       position:absolute;
+    background-color: white;
+        left:500px;
+        top:100px;
+        border-radius:20px;
+  }
+  .setcorrect{
+  position:absolute;
+  left:40px;
+
+
+  }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm   navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+         <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'registration' %}">REGISTRATION</a></li>
+                 <li><a href="{% url 'login' %}">LOGIN</a></li>
+                <li style="color:white"><a href="{% url 'services' %}">PRODUCTS</a></li>
+                <li><a href="{% url 'contact' %}">CONTACTUS</a></li>
+
+          </ul>
+          <div class="social-part">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </div>
+      </nav>
+<br>
+<br>
+<div>
+<div  style="border:5px solid skyblue"  class="registerclass" >
+
+<h2 align="center" class="registerform" style="width:500px">Registration Form</h2>
+<center>
+<form method="post" action="{% url 'savepersondata' %}">
+{% csrf_token %}
+
+<label class="setcorrect">Enter name</label>
+<input type="text" name="name" required="required"></input>
+    <br>
+    <br>
+
+ <label class="setcorrect">Gender</label>
+ <input type="radio" name="gender" value="Male" required="required"/>Male
+<input type="radio" name="gender" value="Female" required="required"/>Female
+
+    <br>
+    <br>
+
+    <label class="setcorrect">Date of Birth</label>
+<input type="date" name="dateofbirth"  style="width: 190px" required="required" placeholder="DD/MM/YYYY"/>
+    <br>
+    <br>
+
+
+    <label class="setcorrect">Email ID</label>
+<input type="email" name="emailid" required="required"/>
+    <br>
+    <br>
+
+    <label class="setcorrect">Username</label>
+    <input type="text" name="username" required="required"/>
+    <br>
+    <br>
+
+<label class="setcorrect">Passowrd</label>
+    <input type="password" name="password" required="required">
+    <br>
+    <br>
+
+
+
+    <label class="setcorrect">Contact No</label>
+<input type="number" name="contactno" maxlength="10" pattern="[6-9]{1}[0-9]{9}" required="required"/>
+    <br>
+    <br>
+
+
+
+<input type="submit" value="Submit" class="button">
+    <div>
+        </div>
+</form>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+{% load static %}
+<html lang="en">
+<head>
+
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    background: #f2f2f2;
+
+}
+.contact-form{
+    background-color: white;
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top:5px black;
+    border-bottom: 2px solid skyblue;
+    box-shadow: 0 0 7px 3px rgba(0,0,0,0.5);
+    text-align: center;
+    height: 450px;
+}
+.contact-form h1{
+    color:skyblue;
+    margin-bottom: 20px;
+}
+.input-box{
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #999;
+    outline: none;
+}
+button{
+    background-color: skyblue;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+button:hover{
+    background: black;
+    transition-delay: 0.2s   ;
+}
+.input-name{
+    width: 100%;
+    position: relative;
+    margin: 20px auto;
+}
+.input-name h2{
+    font-size: 15px;
+    font-weight: 300;
+    text-indent: 5px;
+    letter-spacing: 0.03cm;
+    text-align: left;
+    position: relative;
+    top: -15px;
+    margin-bottom: 5px;
+
+}
+.states{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #999;
+    outline: none;
+}
+.social-part .fa{
+    padding-right:20px;
+}
+ul li a{
+    margin-right: 20px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66%;
+}
+.states:focus{
+    border: 1px black;
+}
+.states:hover{
+    background-color:#fafafa ;
+}
+span{
+    font-size: 15px;
+}
+p{
+    margin-bottom: 5px;
+}
+.nextline{
+
+    margin-bottom: 5px;
+    display: inline;
+}
+.signup{
+    width: 50%;
+    border-radius: 3px;
+}
+.contact-btn{
+    border-radius: 3px;
+}
+.setthefeedback{
+text-align:center;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+    <title>Contact</title>
+</head>
+<body>
+     <nav class="navbar navbar-expand-sm   navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+         <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'registration' %}">REGISTRATION</a></li>
+                 <li><a href="{% url 'login' %}">LOGIN</a></li>
+                <li style="color:white"><a href="{% url 'services' %}">PRODUCTS</a></li>
+                <li><a href="{% url 'contact' %}">CONTACTUS</a></li>
+
+          </ul>
+          <div class="social-part">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </div>
+      </nav>
+
+    <div class="contact-form">
+        {{msg}}
+        <h1>Contact Us</h1>
+        <form action="savethedatacontact" method="POST">
+            {% csrf_token %}
+            <input type="email" class="input-box setthefeedback" name="usermail" placeholder="Enter Email" >
+            <br>
+            <input type="text" class="input-box setthefeedback" style="height:150px" name="userfeedback" placeholder="Enter Feedback">
+            <div class="input-name">
+                    <br> <br>
+                     <input type="submit" value="Contact" class="cotact-btn"></input>
+                     <hr>
+            </div>
+
+        </form>
+
+            </div>
+</body>
+</html>

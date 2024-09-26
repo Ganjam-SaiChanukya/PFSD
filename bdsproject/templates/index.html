@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+<head>
+
+
+
+<style>
+.social-part .fa{
+    padding-right:20px;
+}
+ul li a{
+    margin-right: 20px;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66%;
+}
+
+</style>
+
+
+<head>
+  <title>Bidding System</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,500i,700,800i" rel="stylesheet">
+</head>
+  <body>
+
+    <nav class="navbar navbar-expand-sm   navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+         <li><a href="{% url 'index' %}">HOME</a></li>
+                <li><a href="{% url 'registration' %}">REGISTRATION</a></li>
+                 <li><a href="{% url 'login' %}">LOGIN</a></li>
+                <li style="color:white"><a href="{% url 'services' %}">PRODUCTS</a></li>
+                <li><a href="{% url 'contact' %}">CONTACTUS</a></li>
+
+          </ul>
+          <div class="social-part">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </div>
+      </nav>
+
+<h1 align="center"><b>Welcome To Bidding System</b></h1>
+<div class="imageColumn">
+
+<img src="https://www.pngall.com/wp-content/uploads/10/Bid-Transparent.png" class="center" >
+
+<p align="center">A bidding system in contract bridge is the set of agreements and understandings assigned to calls and sequences of calls used by a partnership, and includes a full description of the meaning of each treatment and convention. The purpose of bidding is for each partnership to ascertain which contract, whether made or defeated and whether bid by them or by their opponents, would give the partnership their best scoring result.
+
+Each bidding system ascribes a meaning to every possible call by each member of a partnership, and presents a codified language which allows the players to exchange information about their card holdings. The vocabulary of bidding is limited to 38 different calls - 35 level/denomination bids[1] plus pass, double and redouble. Any bid becomes a contract if followed by three successive passes, therefore every bridge bid is a potential contract.
+
+By the rules of the game, the agreed meanings of all calls must be public and known to the opponents. In normal club or home play, the opponents are entitled, at their turn to make a call, to ask the partner of the bidder about the meaning of the call. In high-level tournaments, where screens are used, the procedure is to ask the screen-mate about their calls as well as their partner's calls. In serious online tournaments, the procedure is for the player making the call to self-alert it, but the explanation is visible only to the opponents.</p>
+
+    <p align="center">Bidding can be performed by a person under influence of a product or service based on the context of the situation. In the context of auctions, stock exchange, or real estate, the price offer a business or individual is willing to pay is called a bid. In the context of corporate or government procurement initiatives, in Business and Law school students actively bid for high demand elective courses that have a maximum seat capacity though a course bidding process using pre allocated bidding points or e-bidding currency on course bidding systems.[2] The price offer a business or individual is willing to sell is also called a bid. The term "bidding" is also used when placing a bet in card games. Bidding is used by various economic niches for determining the demand and hence the value of the article or property, in today's world of advanced technology, the Internet is a favoured platform for providing bidding facilities; it is a natural way of determining the price of a commodity in a free market economy.</p>
+</div>
+    <center>
+
+<h7><button>DO MORE WITH LESS</button></h7>
+        </center>
+</body>
+</html>
